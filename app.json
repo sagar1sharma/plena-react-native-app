@@ -8,6 +8,17 @@
       "expo-router"
     ],
     "name": "react_native_task",
-    "slug": "react_native_task"
+    "slug": "react_native_task",
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "930bb50d-ad54-4fc9-ab16-3cd0b1a2960b"
+      }
+    },
+    "android": {
+      "package": "com.sagar1sharma.react_native_task"
+    }
   }
 }
