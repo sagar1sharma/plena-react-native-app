@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit'
 import { LayoutAnimation } from 'react-native';
-// const initialState = JSON.parse(localStorage.getItem('cart')) ?? [];
-const initialState = [];
+
+const initialState = []
 
 const cartSlice = createSlice({
     name: 'cart',

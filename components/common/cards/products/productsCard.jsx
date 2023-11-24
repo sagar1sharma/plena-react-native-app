@@ -17,7 +17,7 @@ const ProductCard = ({product, handleNavigate}) => {
     dispatch(addToWishlist(product))
   }
 
-    // add to cart
+  
   const addCart = (product) => {
     dispatch(addToCart(product))
   }
