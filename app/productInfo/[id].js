@@ -50,8 +50,8 @@ const ProductPage = () => {
             />
           ),
           headerRight: () => (
-            <TouchableOpacity style={{backgroundColor: "black"}} onPress={() => router.push('/cart/cartProvider')}>
-              <Image source={icons.cart} style={{height: 18, width: 16}} />
+            <TouchableOpacity  onPress={() => router.push('/cart/cartProvider')}>
+              <Image source={icons.bag} style={{height: 18, width: 16}} />
             </TouchableOpacity>
           ),
           headerTitle: "",

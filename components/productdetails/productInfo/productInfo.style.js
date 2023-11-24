@@ -8,6 +8,11 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "left",
   },
+  favourite: {
+    marginTop: "13px",
+    width: 34,
+    height: 30,
+  },
   logoBox: {
     width: "100%",
     height: 300,
@@ -15,10 +20,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
     backgroundColor: "#FFF",
     borderRadius: SIZES.large,
-  },
-  logoImage: {
-    width: "100%",
-    height: "500%",
   },
   productTitleBox: {
     marginTop: SIZES.small,
@@ -56,6 +57,29 @@ const styles = StyleSheet.create({
     fontFamily: FONT.regular,
     marginLeft: 2,
   },
+  price: {
+    color: COLORS.secondary,
+    fontFamily: FONT.regular,
+    marginRight: 50,
+    marginTop: 5
+  },
+  discountPercentage: {
+    backgroundColor: COLORS.secondary,
+    borderRadius: 5,
+    fontFamily: FONT.regular
+  },
+  discountPercentageText: {
+    color: COLORS.lightWhite, 
+    padding: 5
+  },
+  detailsTitle:{
+    fontFamily: FONT.bold
+  },
+  detailsText:{
+    marginTop: 10,
+    fontFamily: FONT.regular,
+    color: COLORS.gray
+  }
 });
 
 export default styles;

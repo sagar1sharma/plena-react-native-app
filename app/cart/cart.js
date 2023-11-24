@@ -42,12 +42,12 @@ const cart = () => {
               style={{marginRight: 50}}
             />
           ),
-          headerTitle: `Shopping Cart`,
+          headerTitle: `Shopping Cart (${cartItems.length})`,
         }}
       />
 
     <View>
-      <TouchableOpacity>
+      <View>
         {cartItems?.map((product) => (
             <CartCard
               product={product}
@@ -58,7 +58,7 @@ const cart = () => {
 
           )
         }
-        </TouchableOpacity>
+        </View>
     </View>
 
     <CartFooter totalAmount={totalAmount} shipping={shipping} grandTotal={grandTotal}/>

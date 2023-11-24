@@ -12,6 +12,7 @@ import home from '../assets/icons/home.png'
 import categories from '../assets/icons/categories.png'
 import more from '../assets/icons/more.png'
 import favourites from '../assets/icons/favourites.png'
+import bag from '../assets/icons/bag.png'
 
 export default {
   heart,
@@ -27,5 +28,6 @@ export default {
   image,
   home,
   favourite,
-  add
+  add,
+  bag
 };

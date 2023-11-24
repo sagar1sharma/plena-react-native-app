@@ -12,15 +12,15 @@ const styles = StyleSheet.create({
   },
   favourite: {
     marginTop: "13px",
-    width: 16,
-    height: 15,
+    width: 22,
+    height: 20,
   },
   logoContainer: {
-    left: "25%",
+    left: "20%",
     marginTop: 20,
-    marginBottom: 106,
-    width: 68,
-    height: 68,
+    marginBottom: 50,
+    width: 100,
+    height: 100,
     borderRadius: SIZES.medium,
     justifyContent: "center",
     alignItems: "center",
@@ -34,12 +34,12 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     marginHorizontal: SIZES.medium,
   },
-  jobName: {
+  productName: {
     fontSize: SIZES.medium,
     fontFamily: "DMBold",
     color: COLORS.primary,
   },
-  jobType: {
+  productType: {
     fontSize: SIZES.small + 2,
     fontFamily: "DMRegular",
     color: COLORS.gray,

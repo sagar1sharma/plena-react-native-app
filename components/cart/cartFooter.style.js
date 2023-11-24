@@ -10,37 +10,16 @@ const styles = StyleSheet.create({
     right: 0,
     padding: SIZES.small,
     backgroundColor: "#FFF",
-    justifyContent: "space-evenly",
-    alignItems: "center",
+    // alignItems: "center",
   },
-  likeBtn: {
-    width: 55,
-    height: 55,
-    borderWidth: 1,
-    borderColor: "#F37453",
-    borderRadius: SIZES.medium,
-    justifyContent: "center",
-    alignItems: "center",
+  textBox: {
+    justifyContent: "space-between",
+    flexDirection: "row"
   },
-  likeBtnImage: {
-    width: "40%",
-    height: "40%",
-    tintColor: "#F37453",
-  },
-  applyBtn: {
-    flex: 1,
-    backgroundColor: "#FE7654",
-    height: "100%",
-    justifyContent: "center",
-    alignItems: "center",
-    marginLeft: SIZES.medium,
-    borderRadius: SIZES.medium,
-  },
-  applyBtnText: {
-    fontSize: SIZES.medium,
-    color: COLORS.white,
-    fontFamily: FONT.bold,
-  },
+  text:{
+    fontFamily: FONT.medium,
+    padding: 5
+  }
 });
 
 export default styles;

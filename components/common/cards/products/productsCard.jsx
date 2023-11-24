@@ -28,7 +28,7 @@ const ProductCard = ({product, handleNavigate}) => {
       style={styles.container}
       onPress={handleNavigate}
     >
-      <TouchableOpacity onPress={() => {addWishlist(product)}}>
+      <TouchableOpacity style={styles.favourite} onPress={() => {addWishlist(product)}}>
         {wishlistItems.find(item => item.id === product.id)?
         (<Image
           source={icons.heart}
@@ -39,7 +39,7 @@ const ProductCard = ({product, handleNavigate}) => {
           style={styles.favourite}
         />)}
       </TouchableOpacity>
-      <TouchableOpacity style={styles.logoContainer}>
+      <View style={styles.logoContainer}>
         <Image
           source={{uri: checkImageURL(product.images[0]) ? product.images[0] : 'https://media.socio.events/small/a/1670338994-3146-placeholder_wit.png'}}
           resizeMode="contain"
@@ -48,16 +48,15 @@ const ProductCard = ({product, handleNavigate}) => {
         </Image>
         
         {product.quantity && <Text>{product.quantity}</Text>}
-      </TouchableOpacity >
+      </View >
         <View style={styles.textContainer}>
           <View>
-            <Text style={styles.jobName} numberOfLines={1}>Rs. {product.price}</Text>
-            <Text style={styles.jobType}>{product.title}</Text>
+            <Text style={styles.productName} numberOfLines={1}>Rs. {product.price}</Text>
+            <Text style={styles.productType}>{product.title}</Text>
           </View>
           <TouchableOpacity onPress={() => addCart(product)}>
-            <Image source={icons.add} style={{height: 20, width: 20}}></Image>
+            <Image source={icons.add} style={{height: 23, width: 23, marginLeft: 5}}></Image>
           </TouchableOpacity>
-
 
         </View>
     </TouchableOpacity>

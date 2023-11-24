@@ -1,7 +1,7 @@
 import React from "react";
-import { View, Text, Image } from "react-native";
+import { View, Text, Image, Button } from "react-native";
 import styles from "./productInfo.style";
-import { icons } from "../../../constants";
+import { COLORS, icons } from "../../../constants";
 import { checkImageURL } from "../../../utils";
 import { SliderBox } from "react-native-image-slider-box";
 import { TouchableOpacity } from "react-native-gesture-handler";
@@ -33,10 +33,10 @@ const Product = ({ data }) => {
       </View>
 
       <View style={styles.productInfoBox}>
-        <Text style={styles.productName}>{data.title} </Text>
+        <Text style={styles.productName}>{data.brand} </Text>
       </View>
 
-      <TouchableOpacity onPress={() => {addWishlist(data)}}>
+      <TouchableOpacity style={styles.favourite} onPress={() => {addWishlist(data)}}>
         {wishlistItems.find(item => item.id === data.id)?
         (<Image
           source={icons.heart}
@@ -49,32 +49,27 @@ const Product = ({ data }) => {
       </TouchableOpacity>
 
       <View style={styles.logoBox}>
-        <SliderBox images={data.images?data.images:sampledata}/>
+        <SliderBox sliderBoxHeight={300} ImageComponentStyle={{height: '100%', width: '100%'}} images={data.images?data.images:sampledata}/>
       </View>
       
-      <View style={{flexDirection: "row", justifyContent: "space-around"}}>
-        <Text>{data.price}</Text>
-        <Text>{data.discountPercentage}</Text>
+      <View style={{flexDirection: "row", justifyContent: "left", marginTop:10}}>
+        <Text style={styles.price}>Rs. {data.price}</Text>
+        <View style={styles.discountPercentage}><Text style={styles.discountPercentageText}>{data.discountPercentage} % OFF</Text></View>
       </View>
 
       <View style={{flexDirection: "row", justifyContent: "space-between", marginTop: 50}}>
-        <TouchableOpacity onPress={() => addCart(data)}>
-          <Text>
-            Add to Cart
-          </Text>
-        </TouchableOpacity>
-          <Text>
-            Buy Now
-          </Text>
-        <TouchableOpacity>
-
-        </TouchableOpacity>
+        <Button title="Add to Cart" color="#6CA6CD"  onPress={() => addCart(data)}>
+        </Button>
+        <Button title="Buy Now" color="#6CA6CD">
+        </Button>
 
       </View>
 
+      <View style={{marginTop: 20}}>
+        <Text style={styles.detailsTitle}>Details</Text>
+        <Text style={styles.detailsText}>{data.description}</Text>
+      </View>
       
-      <Text>Details</Text>
-        <Text>{data.description}</Text>
     </View>
   );
 };
